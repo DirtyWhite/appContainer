@@ -1,0 +1,63 @@
+Arguments: 
+  D:\softWare\nodejs\node.exe D:\softWare\nodejs\node_modules\yarn\bin\yarn.js dev
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;D:\softWare\TortoiseSVN\bin;D:\softWare\Git\cmd;%NVM_HOME%;%NVM_SYMLINK%;C:\Users\fpc\AppData\Local\Microsoft\WindowsApps;C:\Users\fpc\AppData\Local\GitHubDesktop\bin;D:\softWare\Microsoft VS Code\bin;D:\softWare\nvm;D:\softWare\nodejs
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.5.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\Workspace\activity_devtool\package.json: Unexpected token } in JSON at position 272
+      at JSON.parse (<anonymous>)
+      at D:\softWare\nvm\v14.5.0\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (D:\softWare\nvm\v14.5.0\node_modules\yarn\lib\cli.js:310:30)
+      at D:\softWare\nvm\v14.5.0\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "activity-devtool",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite && set NODE_ENV=development&& electron ./index.js",
+      "build": "vuedx-typecheck . && vite build && electron-builder",
+      "preview": "set NODE_ENV=production&& electron ./index.js",
+    },
+    "dependencies": {
+      "vue": "^3.0.5"
+    },
+    "devDependencies": {
+      "electron": "^11.2.3",
+      "@types/node": "^14.14.25",
+      "@types/rollup": "^0.54.0",
+      "@vitejs/plugin-vue": "^1.1.4",
+      "@vitejs/plugin-vue-jsx": "^1.0.3",
+      "@vue/compiler-sfc": "^3.0.5",
+      "@vuedx/typecheck": "^0.6.0",
+      "@vuedx/typescript-plugin-vue": "^0.6.0",
+      "sass": "^1.32.6",
+      "typescript": "^4.1.3",
+      "typescript-plugin-css-modules": "^3.2.0",
+      "vite": "^2.0.0-beta.65"
+    },
+    "build": {
+      "appId": "com.app.4399ued.activitydevtool",
+      "mac": {},
+      "electronDownload": {
+        "mirror": "https://npm.taobao.org/mirrors/electron/"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

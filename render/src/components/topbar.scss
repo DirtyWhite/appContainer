@@ -1,0 +1,33 @@
+.topbar {
+
+  $height: 40px;
+  height: $height;
+  width: 100vw;
+  display: flex;
+  background-color: #333333;
+
+  .menuItem {
+    color: #fff;
+    height: 100%;
+    line-height: $height;
+    width: 120px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: #222222;
+    }
+
+    &:active {
+      background-color: #111111;
+    }
+
+    &.active {
+      font-weight: bold;
+      color: #333333;
+      background-color: #ffffff;
+    }
+  }
+}
