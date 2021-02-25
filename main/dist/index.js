@@ -7,14 +7,16 @@ var win;
 var isDev = process.env.NODE_ENV === 'development';
 function createWin() {
     win = new electron_1.BrowserWindow({
-        width: 400,
+        width: 900,
         height: 720,
         resizable: false,
         frame: false,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            enableRemoteModule: true
         }
     });
+    win.webContents.openDevTools();
     var URL = isDev ? "http://localhost:3000" : path_1["default"].join(__dirname, '../../release', 'index.html');
     if (isDev) {
         win.loadURL(URL);

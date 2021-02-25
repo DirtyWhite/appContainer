@@ -2,6 +2,9 @@ import { computed, defineComponent, getCurrentInstance } from "vue";
 import { appConfig } from "../../config/menu";
 import { JSX } from "../../utils/renderUtil";
 
+import type Electron from 'electron';
+const remote: Electron.Remote = require('electron').remote;
+
 export default defineComponent({
   name: "icon",
   props: {
@@ -16,7 +19,8 @@ export default defineComponent({
     return JSX(() => {
       return <div class="iconWrap"
         onClick={() => {
-
+          remote.getCurrentWindow().close();
+          remote.getCurrentWindow().webContents.goBack();
         }}
       >
         <div class="icon">{config.value.icon}</div>
