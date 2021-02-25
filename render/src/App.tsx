@@ -1,14 +1,18 @@
-import { defineComponent } from "vue";
-import app from './styles/app.module.scss'
-import Topbar from './components/topbar.vue'
+import { defineComponent, ref } from "vue";
+import appIcon from "./components/appIcon/index.vue";
+import topbar from "./components/topbar/index.vue";
+import { appConfig } from "./config/menu";
+import './styles/app.scss'
 import { JSX } from "./utils/renderUtil";
 export const App = defineComponent({
   name: 'App',
-  components: { Topbar },
+  components: { appIcon, topbar },
   setup: () => {
+    return JSX(() => <div class="root">
 
-    return JSX(() => <div class={app.root}>
-      <Topbar></Topbar>
+      <div class="apps" >
+        {appConfig.map(el => <appIcon appKey={el.key}></appIcon>)}
+      </div>
     </div>)
   }
 })

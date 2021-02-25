@@ -3,11 +3,13 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
+    "strict": false,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "dist"
   },
   "include": [
     "src/**/*",
+    "typings/global.d.ts",
   ]
 }

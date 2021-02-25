@@ -7,4 +7,18 @@
   top: 0;
   background-color: #ffffff;
   font-family: '微软雅黑', Times, serif;
+  -webkit-app-region: no-drag;
+
+  .apps {
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
 }

@@ -26,6 +26,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/app/App.vue"
+    "src/app/App.vue",
+    "src/components/appIcon/index.vue.vue",
+    "src/components/appIcon/index.vue"
   ]
 }
