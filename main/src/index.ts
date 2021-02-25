@@ -12,7 +12,8 @@ function createWin() {
     frame:false,
     webPreferences: {
       nodeIntegration: true,
-      enableRemoteModule:true
+      enableRemoteModule:true,
+      webviewTag:true
     },
   })
   win.webContents.openDevTools();
@@ -40,105 +41,6 @@ function createWin() {
 }
 
 app.whenReady().then(createWin)
-
-
-interface com {
-  name:string
-}
-
-class com1 implements com {
-  name: string
-  com1Prop:string
-}
-
-class com2 implements com {
-  name: string
-  com2Prop:number
-}
-
-const a : coupon = null;
-
-const arr: Array<com1 | com2> = [
-  {
-    name: '234324',
-    com1Prop: '234234',
-    com2Prop: 234234
-  }
-]
-
-
-
-const prop: com1 | com2  = {
-  name: '234324',
-  com1Prop: '234234',
-  com2Prop: 234234,
-}
-
-
-type com01 = {
-  name:string,
-  com1Prop: string
-}
-type com02 = {
-  name:string,
-  com2Prop:number
-}
-
-
-type union = com01 | com02
-
-let prop3: com01 | com02 = {
-  name: '234324',
-  com1Prop: '234234',
-  com2Prop: 42342,
-}
-
-
-function test3(arg:union) {
-   
-}
-
-test3(prop3);
-
-enum args  {
-
-}
-
-
-
-
-
-
-
-
-
-
-function test1(arg: com1 | com2) {
-    if(arg instanceof com1){}
-    if(arg instanceof com2){}
-}
-
-test1 ({
-  name: '234324',
-  com1Prop: '234234',
-  com2Prop: 234234
-})
- 
-
-
-const arr1: Array<com1 & com2> = [
-  {
-    name: '234324',
-    com2Prop: 234234,
-    com1Prop: '24324'
-  }
-]
-
-
-interface commonReward {
-  id:string
-}
-
 
 
 

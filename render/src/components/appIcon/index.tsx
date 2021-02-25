@@ -19,8 +19,7 @@ export default defineComponent({
     return JSX(() => {
       return <div class="iconWrap"
         onClick={() => {
-          remote.getCurrentWindow().close();
-          remote.getCurrentWindow().webContents.goBack();
+          instance.emit('click', appKey)
         }}
       >
         <div class="icon">{config.value.icon}</div>
